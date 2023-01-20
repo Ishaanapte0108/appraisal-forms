@@ -1,0 +1,42 @@
+{
+    "enteredUsername": "prakash21",
+    "enterdPassword": "pwd56"
+}
+{
+      "first_name": "Prakash",
+      "last_name": "Parmar",
+      "username": "prakash21",
+      "email": "prakash.parmar@gmail.com",
+      "professorId": "a33",
+      "password": "pwd56",
+      "department_name": "CMPN",
+      "department_designation": "assistant professor",
+      "accessLevel": 1
+}
+
+auto caps first letter
+password strength validation
+can he edit?
+is the year gone?
+
+{
+     "createdBy" : "prakash21",
+     "createdAt" : "tuesday",
+
+     "ayear": "2022",
+     "hoursQB" : "20+",
+     "hoursWeightage" : 0.5,
+     "hoursProof" : "NA",
+
+     "platfromQB" :"udemy",
+     "platformWeightage" : 1,
+     "platfromProof" : "NA",
+
+     "acessmentOutcomeQB" : "Pass",
+     "acessmentOutcomeWeightage" : 0.4,
+     "acessmentOutcomeProof" : "NA",
+
+     "dateOfCertificationQB" : "2 years",
+     "dateOfCertificationWeightage" : 1,
+     "dateOfCertificationProof" : "NA"
+}
