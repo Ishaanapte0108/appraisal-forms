@@ -71,6 +71,7 @@ exports.ai1 = async (req , res , next) =>{
         reviewingOfficer: ro
   })
   console.log('Object : ', Ai1Obj)
+  res.send(json('done'))
   
 
   } catch (e) {
@@ -85,7 +86,6 @@ exports.ai1_getMaxMarks = async (req , res , next) =>{
   const Ai1Obj = new Ai1
   await Ai1.updateOne(await Ai1.findOne({ academicYear: '2022-2023'}, {_id: 1}).sort({marksObtained: -1}).limit(1), {"$set": {"max": false} })
 }
-
 
 
 exports.ai12 = async (req, res, next)=>{
