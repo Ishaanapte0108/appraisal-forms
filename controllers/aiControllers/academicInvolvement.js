@@ -10,68 +10,68 @@ exports.ai1 = async (req , res , next) =>{
 
   try {
 
-    
+    const isEditable = req.body.isEditable
+
     const author = await UserInfo.findOne({ _id: new ObjectID("63b5120445f9c76bcda77b78")}, {_id: 0, __v: 0})
     const academicYear = req.body.academicYear
 
     const hoursQB = req.body.hoursQB
     const hoursWeightage = req.body.hoursWeightage
     const hoursProof = req.body.hoursProof
-    const isEditable = req.body.isEditable
+    
     // hoursApplicableWeightage calculated automatically
 
     const platfromQB = req.body.platfromQB
     const platformWeightage = req.body.platformWeightage
     const platfromProof = req.body.platfromProof
-    const psIsEditable = req.body.psIsEditable
+    
 
     const acessmentOutcomeQB = req.body.acessmentOutcomeQB
     const acessmentOutcomeWeightage = req.body.acessmentOutcomeWeightage
     const acessmentOutcomeProof = req.body.acessmentOutcomeProof
-    const aoIsEditable = req.body.aoIsEditable
+    
 
     const dateOfCertificationQB = req.body.dateOfCertificationQB
     const dateOfCertificationWeightage = req.body.dateOfCertificationWeightage
     const dateOfCertificationProof = req.body.dateOfCertificationProof
-    const docIsEditable = req.body.docIsEditable
+    
 
-    const ro = await UserInfo.findOne({ _id: new ObjectID("63b5119d45f9c76bcda77b77")}, {_id: 0, __v: 0})
+    const ro = await UserInfo.findOne({ _id: new ObjectID("63b92e7b8a333933cf864bdc")}, {_id: 0, __v: 0})
     //date by default
+
 
     const Ai1Obj = await Ai1.create({
 
       createdBy: author,
       academicYear,
+      isEditable,
+
       criteriaOne:
         {
           hoursQB,
           hoursWeightage,
           hoursProof,
-          isEditable,
         },
         criteriaTwo:{
           platfromQB,
           platformWeightage,
           platfromProof,
-          psIsEditable
         },
         criteriaThree:{
           acessmentOutcomeQB,
           acessmentOutcomeWeightage,
           acessmentOutcomeProof,
-          aoIsEditable
         },
         criteriaFour:{
           dateOfCertificationQB,
           dateOfCertificationWeightage,
           dateOfCertificationProof,
-          docIsEditable
         },
         
         reviewingOfficer: ro
   })
   console.log('Object : ', Ai1Obj)
-  res.send(json('done'))
+  res.send('done')
   
 
   } catch (e) {
@@ -79,6 +79,7 @@ exports.ai1 = async (req , res , next) =>{
     console.log(e)
 
   }
+
 }
 
 
@@ -93,6 +94,7 @@ exports.ai12 = async (req, res, next)=>{
   try{
 
   const author = await UserInfo.findOne({ _id: new ObjectID("63b5120445f9c76bcda77b78")}, {_id: 0, __v: 0})
+  
   const academicYear = req.body.academicYear
   const isEditable = req.body.isEditable
 

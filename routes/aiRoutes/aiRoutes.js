@@ -11,5 +11,6 @@ router.use(express.json())
 router.post('/certification-of-courses-alloted/ai1_getMaxMarks', aiController.ai1_getMaxMarks);
 router.post('/certification-of-courses-alloted', aiController.ai1);
 router.post('/exam-related-work', aiController.ai12);
+router.post('/preview-of-grades-achieved-in-the-previoud-semester', aiController.ai13)
 
 module.exports = router;
